@@ -1,0 +1,17 @@
+name: "shellcheck-linter"
+author: ragdata
+description: "Use shellcheck without having to install it"
+
+inputs:
+    cli-args:
+        description: "Command line arguments"
+        required: true
+
+branding:
+    icon: "check-circle"
+    color: blue
+runs:
+    using: "docker"
+    image: "docker://botsudo/action-shellcheck:latest"
+    args:
+      - ${{ inputs.cli-args }}
