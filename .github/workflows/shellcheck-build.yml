@@ -62,4 +62,3 @@ jobs:
                 ragdata/shellcheck
                 ghcr.io/ragdata/shellcheck
             platforms: linux/amd64,linux/arm64
-            target: shellcheck
