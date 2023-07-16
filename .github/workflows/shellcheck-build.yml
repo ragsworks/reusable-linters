@@ -16,15 +16,15 @@ on:
         branches:
             - 'master'
         paths:
-            - '.github/actions/docker/Dockerfile'
-            - '.github/actions/docker/entrypoint.sh'
+            - '.github/actions/shellcheck/docker/Dockerfile'
+            - '.github/actions/shellcheck/docker/entrypoint.sh'
             - '.github/workflows/shellcheck-build.yml'
     pull_request:
         branches:
             - 'master'
         paths:
-            - '.github/actions/docker/Dockerfile'
-            - '.github/actions/docker/entrypoint.sh'
+            - '.github/actions/shellcheck/docker/Dockerfile'
+            - '.github/actions/shellcheck/docker/entrypoint.sh'
             - '.github/workflows/shellcheck-build.yml'
     # execute monthly to keep image fresh with upstream base images
     schedule:
