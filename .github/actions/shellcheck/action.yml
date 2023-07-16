@@ -1,17 +1,24 @@
+# ==================================================================
+# Reusable ShellCheck Linter Action
+# ==================================================================
+# This is the example you should work from to implement your own
+# reusable action (and is about as simple as they come)
+# ==================================================================
 name: "shellcheck-linter"
 author: ragdata
-description: "Use shellcheck without having to install it"
+description: "Use ShellCheck without having to install it"
 
 inputs:
     cli-args:
-        description: "Command line arguments"
+        description: "Command-Line Arguments"
         required: true
 
 branding:
     icon: "check-circle"
-    color: blue
+    color: red
+
 runs:
     using: "docker"
     image: "docker://botsudo/action-shellcheck:latest"
     args:
-      - ${{ inputs.cli-args }}
+        - ${{ inputs.cli-args }}
