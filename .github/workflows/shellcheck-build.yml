@@ -43,7 +43,7 @@ jobs:
 
         uses: ./.github/workflows/docker-build-push.yml
 
-        permissions: { write-all }
+        permissions: write-all
 #            contents: read
 #            packages: write
 #            pull-requests: write
