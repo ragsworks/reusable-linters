@@ -8,7 +8,7 @@ ARG RELEASE_VERSION=latest
 
 RUN apk add --no-cache --update make bash
 
-COPY entrypoint.sh /entrypoint.sh
+COPY ./entrypoint.sh /
 
 # METADATA
 LABEL org.label-schema.vendor="Sudo-Bot" \
