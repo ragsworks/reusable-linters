@@ -58,7 +58,7 @@ jobs:
         with:
             # Here is where you specify the input parameters defined in shellcheck-build.yml
             dockerhub-enable: true
-            ghcr-enable: true
+            ghcr-enable: false
             context: "{{defaultContext}}:.github/actions/shellcheck/docker"
             image-names: |
                 ragdata/shellcheck
