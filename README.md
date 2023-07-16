@@ -98,9 +98,9 @@ This project contains the following **Reusable GitHub Actions and Workflows**
 - `Docker Build & Push Image`
   - Generic Docker Image Builder capable of building multi-platform images and pushing them to multiple registries 
 - `Docker Build ShellCheck Image`
-  - Workflow template to build the `ShellCheck Linter Action` docker image 
+  - Workflow template to build the ShellCheck Linter Action docker image 
 - `ShellCheck Linter Template`
-  - Workflow template to call the `ShellCheck Linter Action`
+  - Workflow template to call the ShellCheck Linter Action
 
 [`^ Top`](#toc)
 
