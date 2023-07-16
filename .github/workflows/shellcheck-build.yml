@@ -58,7 +58,6 @@ jobs:
             dockerhub-enable: true
             ghcr-enable: true
             context: "{{defaultContext}}:.github/actions/shellcheck/docker"
-            # file: .github/actions/shellcheck/docker/Dockerfile
             image-names: |
                 ragdata/shellcheck
                 ghcr.io/ragdata/shellcheck

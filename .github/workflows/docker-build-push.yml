@@ -136,10 +136,10 @@ on:
                 description: "single-use image tag for GHA runs"
                 value: ${{ jobs.build-image.outputs.image-tag }}
 
-permissions:
-    contents: read
-    packages: write
-    pull-requests: write
+#permissions:
+#    contents: read
+#    packages: write
+#    pull-requests: write
 
 jobs:
 
@@ -148,6 +148,11 @@ jobs:
         name: Build Image
 
         runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            packages: write
+            pull-requests: write
 
         outputs:
             # only outputs the unique gha- image tag that's unique to each GHA run
