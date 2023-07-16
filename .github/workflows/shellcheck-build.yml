@@ -43,10 +43,10 @@ jobs:
 
         uses: ./.github/workflows/docker-build-push.yml
 
-        permissions:
-            contents: read
-            packages: write
-            pull-requests: write
+        permissions: { write-all }
+#            contents: read
+#            packages: write
+#            pull-requests: write
 
         secrets:
             # Don't forget to save these secrets to your repository if you use them!!

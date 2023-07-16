@@ -149,10 +149,10 @@ jobs:
 
         runs-on: ubuntu-latest
 
-        permissions:
-            contents: read
-            packages: write
-            pull-requests: write
+        permissions: write-all
+#            contents: read
+#            packages: write
+#            pull-requests: write
 
         outputs:
             # only outputs the unique gha- image tag that's unique to each GHA run
@@ -169,6 +169,9 @@ jobs:
             - name: Setup Docker BuildX
               id: buildx
               uses: docker/setup-buildx-action@v2.9.1
+              with:
+                  driver: docker
+                  install: true
 
             - name: Login to DockerHub
               if: inputs.dockerhub-enable

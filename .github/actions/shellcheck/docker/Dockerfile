@@ -1,5 +1,7 @@
 FROM koalaman/shellcheck-alpine:latest
 
+MAINTAINER ragdata@ragdata.dev
+
 # METADATA PARAMS
 ARG VCS_REF
 ARG BUILD_DATE
