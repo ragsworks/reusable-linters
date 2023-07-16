@@ -86,7 +86,21 @@ If you're contributing code to the project, you'll want 🔴
 
 ## ❓ [What's Included?](#toc)
 
+This project contains the following **Reusable GitHub Actions and Workflows**
 
+#### [Reusable Actions]():
+
+- `ShellCheck Linter Action`
+  - A very simple reusable docker-based action which makes use of a third-party shellcheck action, thus demonstrating how to make use of an action without installing it yourself. 
+
+#### [Reusable Workflows]():
+
+- `Docker Build & Push Image`
+  - Generic Docker Image Builder capable of building multi-platform images and pushing them to multiple registries 
+- `Docker Build ShellCheck Image`
+  - Workflow template to build the `ShellCheck Linter Action` docker image 
+- `ShellCheck Linter Template`
+  - Workflow template to call the `ShellCheck Linter Action`
 
 [`^ Top`](#toc)
 
@@ -194,8 +208,12 @@ It's not just contributions of code that I'm looking for.  If you have any ideas
 
 This project incorporates ideas and / or code crafted by the following talented individuals:
 
+* [**bretfisher/docker-build-workflow**](https://github.com/bretfisher/docker-build-workflow)<br />
+  [UNLICENSED](https://unlicense.org)
+  
+
 * [**sudo-bot/action-shellcheck**](https://github.com/sudo-bot/action-shellcheck)<br />
-	MPL-2.0 LICENSED
+	[MPL-2.0 LICENSED](https://mozilla.org/MPL/2.0/)
 
 > "We see much further, and reach much higher,<br>only because we stand upon the shoulders of giants"
 
@@ -218,6 +236,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## 📖 [Resources](#toc)
 
 ### Attributed Projects
+* [**bretfisher/docker-build-workflow**](https://github.com/bretfisher/docker-build-workflow)<br />
 * [**sudo-bot/action-shellcheck**](https://github.com/sudo-bot/action-shellcheck)
 
 [`^ Top`](#toc)

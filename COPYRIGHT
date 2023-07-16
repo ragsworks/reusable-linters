@@ -9,6 +9,10 @@ ATTRIBUTIONS
 This project incorporates ideas and / or code crafted by the following
 talented individuals:
 
+    - bretfisher/docker-build-workflow
+      UNLICENSED
+
+
 	- sudo-bot/action-shellcheck
 	  MPL-2.0 LICENSED
 
