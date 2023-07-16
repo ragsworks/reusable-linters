@@ -1,3 +1,9 @@
+# ==================================================================
+# ShellCheck Linter Template
+# ==================================================================
+# This is the example you should work from to implement your own
+# reusable workflow which calls your own reusable action
+# ==================================================================
 name: ShellCheck Linter Template
 
 on:
@@ -20,4 +26,4 @@ jobs:
             - name: Run ShellCheck
               uses: ragsworks/reusable-linters/.github/actions/shellcheck@master
               with:
-                  cli-args: "--format=checkstyle --severity=info .github/actions/shellcheck/docker/tests/script.sh"
+                  cli-args: "--format=checkstyle --severity=info ./tests/script.sh"
