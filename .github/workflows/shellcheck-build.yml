@@ -18,6 +18,7 @@ on:
         paths:
             - '.github/actions/shellcheck/docker/Dockerfile'
             - '.github/actions/shellcheck/docker/entrypoint.sh'
+            - '.github/workflows/docker-build-push.yml'
             - '.github/workflows/shellcheck-build.yml'
     pull_request:
         branches:
@@ -25,6 +26,7 @@ on:
         paths:
             - '.github/actions/shellcheck/docker/Dockerfile'
             - '.github/actions/shellcheck/docker/entrypoint.sh'
+            - '.github/workflows/docker-build-push.yml'
             - '.github/workflows/shellcheck-build.yml'
     # execute monthly to keep image fresh with upstream base images
     schedule:
