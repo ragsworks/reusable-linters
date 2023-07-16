@@ -26,4 +26,4 @@ jobs:
             - name: Run ShellCheck
               uses: ragsworks/reusable-linters/.github/actions/shellcheck@master
               with:
-                  cli-args: "--format=checkstyle --severity=info actions/shellcheck/docker/tests/script.sh"
+                  cli-args: "--format=checkstyle --severity=info ./github/actions/shellcheck/docker/tests/script.sh"
