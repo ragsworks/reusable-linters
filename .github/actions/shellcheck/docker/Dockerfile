@@ -8,7 +8,7 @@ ARG RELEASE_VERSION=latest
 
 RUN apk add --no-cache --update make bash
 
-COPY entrypoint.sh /
+COPY entrypoint.sh /entrypoint.sh
 
 # METADATA
 LABEL org.label-schema.vendor="Sudo-Bot" \
@@ -21,4 +21,4 @@ LABEL org.label-schema.vendor="Sudo-Bot" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.docker.schema-version="1.0"
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
