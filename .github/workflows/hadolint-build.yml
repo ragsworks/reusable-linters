@@ -1,0 +1,71 @@
+# ==================================================================
+# Docker Build HadoLint Image
+# ==================================================================
+# This is the example you should work from to implement your own
+# reusable workflow which calls your own reusable docker image builder
+# ==================================================================
+name: Docker Build HadoLint Image
+
+on:
+    # allow workflow to be called by other workflows
+    workflow_call:
+    # allow workflow to be executed manually
+    workflow_dispatch:
+
+    # --------------------------------------------------------------
+    # The following execution calls are suggested for a production
+    # implementation of this linter:
+    # --------------------------------------------------------------
+    # execute whenever particular files are updated
+    # push:
+    #     branches:
+    #         - 'master'
+    #     paths:
+    #         - '.github/actions/hadolint/docker/Dockerfile'
+    #         - '.github/actions/hadolint/docker/entrypoint.sh'
+    #         - '.github/workflows/docker-build-push.yml'
+    #         - '.github/workflows/hadolint-build.yml'
+    # pull_request:
+    #    branches:
+    #        - 'master'
+    #    paths:
+    #        - '.github/actions/hadolint/docker/Dockerfile'
+    #        - '.github/actions/hadolint/docker/entrypoint.sh'
+    #        - '.github/workflows/docker-build-push.yml'
+    #        - '.github/workflows/hadolint-build.yml'
+    # execute monthly to keep image fresh with upstream base images
+    # schedule:
+    #     - cron: '0 12 15 * *'
+
+# immediately halt any previously-started, and still-active runs of this workflow on the same branch
+concurrency:
+    group: ${{ github.ref }}-${{ github.workflow }}
+    cancel-in-progress: true
+
+jobs:
+
+    docker-build-image:
+
+        name: Call Docker Build Image
+
+        uses: ./.github/workflows/docker-build-push.yml
+
+        permissions:
+            contents: read
+            packages: write
+            pull-requests: write
+
+        secrets:
+            # Don't forget to save these secrets to your repository if you use them!!
+            dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
+            dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
+
+        with:
+            # Here is where you specify the input parameters defined in shellcheck-build.yml
+            dockerhub-enable: true
+            ghcr-enable: true
+            context: "{{defaultContext}}:.github/actions/hadolint/docker"
+            image-names: |
+                ragdata/hadolint
+                ghcr.io/ragsworks/hadolint
+            platforms: linux/amd64,linux/arm64

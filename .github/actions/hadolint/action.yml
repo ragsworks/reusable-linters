@@ -1,0 +1,24 @@
+# ==================================================================
+# Reusable HadoLint Dockerfile Linter Action
+# ==================================================================
+# This is the example you should work from to implement your own
+# reusable action (and is about as simple as they come)
+# ==================================================================
+name: "hadolint-linter"
+author: Ragdata
+description: "Use HadoLint without having to install it"
+
+inputs:
+    cli-args:
+        description: "Command-Line Arguments"
+        required: true
+
+branding:
+    icon: "shield"
+    color: red
+
+runs:
+    using: "docker"
+    image: "docker://hadolint/hadolint:latest-alpine"
+    args:
+        - ${{ inputs.cli-args }}
