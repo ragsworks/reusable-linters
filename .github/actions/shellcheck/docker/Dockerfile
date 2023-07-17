@@ -13,6 +13,7 @@ RUN apk add --no-cache --update make bash
 COPY entrypoint.sh /entrypoint.sh
 
 # METADATA
+LABEL org.opencontainers.image.description="This image contains the latest version of ShellCheck, ready to run"
 LABEL org.label-schema.vendor="Sudo-Bot" \
     org.label-schema.url="https://github.com/koalaman/shellcheck#readme" \
     org.label-schema.name="ShellCheck Action" \
