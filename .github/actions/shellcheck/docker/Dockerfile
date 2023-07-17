@@ -1,6 +1,6 @@
 FROM koalaman/shellcheck-alpine:latest
 
-MAINTAINER ragdata@ragdata.dev
+LABEL maintainer=Ragdata<ragdata@ragdata.dev>
 
 # METADATA PARAMS
 ARG VCS_REF
