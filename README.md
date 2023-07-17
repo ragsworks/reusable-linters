@@ -23,8 +23,7 @@
 
 <div align="center">
 
-![Check Status](https://img.shields.io/github/checks-status/ragsworks/reusable-linters/master?logo=github&style=for-the-badge)
-![Open Bug Issues](https://img.shields.io/github/issues/ragsworks/reusable-linters/bug?logo=github&style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues-raw/ragsworks/reusable-linters?style=for-the-badge&logo=github)
 ![Last Commit](https://img.shields.io/github/last-commit/ragsworks/reusable-linters/master?logo=github&style=for-the-badge)
 ![MIT](https://img.shields.io/badge/License-MIT-gold?style=for-the-badge)
 
@@ -66,8 +65,9 @@ If you like this repository, please give it a ⭐ (it really does help)
 
 ## ⭐ [Project Overview](#-table-of-contents)
 
+> The reason for this project's existence is to provide real-world, **_working_** examples of the most useful elements of GitHub's Reusable Actions and Workflows.  You CAN make use of this code as-is ... but you'll get a LOT more mileage out of it if you use it as a template to build your own workflows.
 
-
+`RagsWorks Reusable Linters` provides a collection of the most common code linters you're likely to use and makes them available as Reusable GitHub Actions and Workflow Templates that you can use to implement your own reusable actions and workflows.
 
 ### [Branch Reliability](#toc)
 
@@ -88,19 +88,35 @@ If you're contributing code to the project, you'll want 🔴
 
 This project contains the following **Reusable GitHub Actions and Workflows**
 
-#### [Reusable Actions]():
+LEGEND:
 
-- `ShellCheck Linter Action`
-  - A very simple reusable docker-based action which makes use of a third-party shellcheck action, thus demonstrating how to make use of an action without installing it yourself. 
+ - ☑️ = WIP
+ - ✅ = AVAILABLE NOW
 
-#### [Reusable Workflows]():
+#### [Reusable Actions](#toc):
 
-- `Docker Build & Push Image`
-  - Generic Docker Image Builder capable of building multi-platform images and pushing them to multiple registries 
-- `Docker Build ShellCheck Image`
-  - Workflow template to build the ShellCheck Linter Action docker image 
-- `ShellCheck Linter Template`
-  - Workflow template to call the ShellCheck Linter Action
+- ☑️ `ActionLint`
+- ☑️ `ESLint` (Typescript)
+- ☑️ `ESLint-JSON`
+- ☑️ `GitLeaks` (Secrets)
+- ✅ `HadoLint`
+- ☑️ `HTMLLint`
+- ☑️ `LibXML`
+- ☑️ `MarkdownLint`
+- ☑️ `PHPStan`
+- ☑️ `PyLint`
+- ☑️ `RuboCop`
+- ✅ `ShellCheck Linter Action`
+- ☑️ `SQL-Lint`
+- ☑️ `TextLint`
+- ☑️ `YAMLLint`
+
+#### [Reusable Workflows](#toc):
+
+- ✅ `Docker Build & Push Image`
+  - Generic Docker Image Builder capable of building multi-platform images and pushing them to multiple registries (DockerHub & GHCR) 
+- ✅ `Docker Build ShellCheck Image`
+- ✅ `ShellCheck Linter Template`
 
 [`^ Top`](#toc)
 
@@ -184,7 +200,7 @@ This project contains the following **Reusable GitHub Actions and Workflows**
 
 ## 🔐 [Security](#toc)
 
-While the `RagsWorks` project follows good security practices, 100% security can never be guaranteed in any software package.  The `RagsWorks Super-Linter Workflow` is provided AS IS, and without warranty.  You can find more details in the [LICENSE](LICENSE) file included with this repository.
+While the `RagsWorks` Organization follows good security practices, 100% security can never be guaranteed in any software package.  The `RagsWorks Reusable Linters` is provided AS IS, and without warranty.  You can find more details in the [LICENSE](LICENSE) file included with this repository.
 
 If you discover any issue regarding the security of this project, please disclose that information responsibly by sending a [security advisory][advisory].  **PLEASE DO NOT CREATE AN ISSUE OR DISCUSSION TOPIC.**  You can read more about this project's security policies [HERE][security]
 
