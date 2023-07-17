@@ -62,5 +62,5 @@ jobs:
             context: "{{defaultContext}}:.github/actions/shellcheck/docker"
             image-names: |
                 ragdata/shellcheck
-                ghcr.io/${{ github.actor }}/shellcheck
+                ghcr.io/ragsworks/shellcheck
             platforms: linux/amd64,linux/arm64
