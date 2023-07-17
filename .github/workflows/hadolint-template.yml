@@ -26,4 +26,4 @@ jobs:
             - name: Run HadoLint
               uses: ragsworks/reusable-linters/.github/actions/hadolint@master
               with:
-                  cli-args: "tests/Dockerfile"
+                  cli-args: ".github/actions/hadolint/docker/tests/Dockerfile"
