@@ -11,26 +11,31 @@ on:
     workflow_call:
     # allow workflow to be executed manually
     workflow_dispatch:
+
+    # --------------------------------------------------------------
+    # The following execution calls are suggested for a production
+    # implementation of this linter:
+    # --------------------------------------------------------------
     # execute whenever particular files are updated
-    push:
-        branches:
-            - 'master'
-        paths:
-            - '.github/actions/shellcheck/docker/Dockerfile'
-            - '.github/actions/shellcheck/docker/entrypoint.sh'
-            - '.github/workflows/docker-build-push.yml'
-            - '.github/workflows/shellcheck-build.yml'
-    pull_request:
-        branches:
-            - 'master'
-        paths:
-            - '.github/actions/shellcheck/docker/Dockerfile'
-            - '.github/actions/shellcheck/docker/entrypoint.sh'
-            - '.github/workflows/docker-build-push.yml'
-            - '.github/workflows/shellcheck-build.yml'
+    # push:
+    #     branches:
+    #         - 'master'
+    #     paths:
+    #         - '.github/actions/shellcheck/docker/Dockerfile'
+    #         - '.github/actions/shellcheck/docker/entrypoint.sh'
+    #         - '.github/workflows/docker-build-push.yml'
+    #         - '.github/workflows/shellcheck-build.yml'
+    # pull_request:
+    #    branches:
+    #        - 'master'
+    #    paths:
+    #        - '.github/actions/shellcheck/docker/Dockerfile'
+    #        - '.github/actions/shellcheck/docker/entrypoint.sh'
+    #        - '.github/workflows/docker-build-push.yml'
+    #        - '.github/workflows/shellcheck-build.yml'
     # execute monthly to keep image fresh with upstream base images
-    schedule:
-        - cron: '0 12 15 * *'
+    # schedule:
+    #     - cron: '0 12 15 * *'
 
 # immediately halt any previously-started, and still-active runs of this workflow on the same branch
 concurrency:
@@ -45,10 +50,10 @@ jobs:
 
         uses: ./.github/workflows/docker-build-push.yml
 
-        permissions: write-all
-#            contents: read
-#            packages: write
-#            pull-requests: write
+        permissions:
+            contents: read
+            packages: write
+            pull-requests: write
 
         secrets:
             # Don't forget to save these secrets to your repository if you use them!!

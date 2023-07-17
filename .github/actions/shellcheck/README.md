@@ -6,9 +6,17 @@
 
 </h2>
 
+<h4 align="center">
+
+Base Project: [koalaman/shellcheck](https://github.com/koalaman/shellcheck)
+
+</h4>
+
 ## ⭐ [Overview](#top)
 
 This reusable GitHub action provides a fully-featured implementation of `ShellCheck`.
+
+`ShellCheck` is used to inspect `shell scripts (.sh)`.
 
 ## ⚖️ [License](#top)
 
