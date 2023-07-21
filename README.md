@@ -127,6 +127,12 @@ LEGEND:
 
 [`^ Top`](#toc)
 
+## 📛 [Badges](#toc)
+
+
+
+[`^ Top`](#toc)
+
 ## 💪 [Available Support](#toc)
 
 ### Project Resources

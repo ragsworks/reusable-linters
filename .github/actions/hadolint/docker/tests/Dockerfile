@@ -1,4 +1,4 @@
-FROM hadolint/hadolint:latest-alpine
+FROM hadolint/hadolint
 
 LABEL maintainer=Ragdata<ragdata@ragdata.dev>
 
@@ -10,7 +10,7 @@ ARG RELEASE_VERSION=latest
 
 RUN apk add --no-cache --update make bash
 
-COPY entrypoint.sh /entrypoint.sh
+# COPY entrypoint.sh /entrypoint.sh
 
 # METADATA
 LABEL org.opencontainers.image.description="This image contains the latest version of HadoLint, ready to run"
@@ -24,4 +24,4 @@ LABEL org.label-schema.vendor="HadoLint" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.docker.schema-version="1.0"
 
-ENTRYPOINT ["/entrypoint.sh"]
+# ENTRYPOINT ["/entrypoint.sh"]

@@ -61,7 +61,7 @@ jobs:
             dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
 
         with:
-            # Here is where you specify the input parameters defined in shellcheck-build.yml
+            # Here is where you specify the input parameters defined in docker-build-push.yml
             dockerhub-enable: true
             ghcr-enable: true
             context: "{{defaultContext}}:.github/actions/shellcheck/docker"
