@@ -163,7 +163,7 @@ jobs:
             # We need qemu and buildx so we can build for multiple platforms later
             - name: Setup QEMU
               id: qemu
-              uses: docker/setup-qemu-action@v2.2.0
+              uses: docker/setup-qemu-action@v3.0.0
 
             # BuildKit (used with `docker buildx`) is the best way to build images
             - name: Setup Docker BuildX
